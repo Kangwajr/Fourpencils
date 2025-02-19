@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import required modules
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper/modules";
 import GalleryItem from "./GalleryItem";
 import { galleryItems } from "./galleryData";
 
@@ -16,9 +14,9 @@ const OurGallery = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <div className="py-20 bg-black">
+    <div className="py-20  inset-0  bg-cover bg-center bg-fixed" style={{ fontFamily: "'Wonderkids', sans-serif", backgroundImage: "url('/studio2.jpeg')", }}>
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4 text-sky-500">Our Gallery</h1>
+      <h1 className="text-6xl font-bold mb-4 text-sky-500">Our Gallery</h1>
         <p className="text-[#FFD700] max-w-3xl mx-auto px-4">
           Explore a collection of stunning visuals, including 2D art, 3D
           creations, animations, comics, storybooks, and illustrations. Click on
@@ -30,7 +28,14 @@ const OurGallery = () => {
           effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={3}
+          slidesPerView={2}
+          loop={true}
+          speed={1000}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          }}
           coverflowEffect={{
             rotate: 50,
             stretch: 1,
@@ -40,8 +45,8 @@ const OurGallery = () => {
           }}
           pagination={{ clickable: true }}
           navigation={true}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="mySwiper "
+          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+          className="mySwiper"
         >
           {galleryItems.map((item) => (
             <SwiperSlide key={item.id}>

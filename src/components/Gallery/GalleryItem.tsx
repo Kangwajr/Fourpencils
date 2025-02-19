@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 interface GalleryItemProps {
   id: number;
@@ -14,11 +15,8 @@ interface GalleryItemProps {
 const GalleryItem = ({
   id,
   title,
-  type,
   icon,
   url,
-  galleryUrl,
-  selected,
   onSelect,
 }: GalleryItemProps) => {
   return (
@@ -42,38 +40,12 @@ const GalleryItem = ({
             </div>
           </div>
           <div className="flex justify-center space-x-3">
-            {type === "image" ? (
-              <>
-                {/* <a
-                  href={url}
-                  className="text-sky-500 px-4 py-2 bg-[#FFD700] rounded-full backdrop-blur-sm hover:bg-white/30 transition-colors"
-                  // target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Image
-                </a> */}
-              </>
-            ) : (
-              <>
-                <a
-                  href={url}
-                  className="text-white px-4 py-2 bg-[#FFD700] rounded-full backdrop-blur-sm hover:bg-[#FFD700] transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Video
-                </a>
-              </>
-            )}
-
-            <a
-              href={galleryUrl}
-              className="text-sky-500 px-4 py-2 bg-[#FFD700] rounded-full backdrop-blur-sm hover:bg-white/30 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Gallery
-            </a>
+            <Link
+                          to="/gallery"
+                         className="text-sky-500 px-4 py-2 bg-[#FFD700] rounded-full backdrop-blur-sm hover:bg-white/30 transition-colors"
+                        >
+                          View Gallery
+                        </Link>
           </div>
         </div>
       </div>

@@ -67,7 +67,7 @@ function serviceSection() {
         </h2>
         <div className="relative">
           <div className="overflow-hidden rounded-2xl">
-            <div className="relative h-50">
+            <div className="relative w-50 h-50">
               <img
                 src={services[currentSlide].url}
                 alt={services[currentSlide].title}

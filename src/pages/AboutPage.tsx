@@ -2,7 +2,6 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { Palette, Users, Target, Lightbulb, Award, Heart } from 'lucide-react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 const AboutPage = () => {
   const achievements = [
@@ -51,9 +50,9 @@ const AboutPage = () => {
 <section className="relative h-[80vh]">
   {/* Background Image */}
   <div 
-    className="absolute inset-0 w-full h-full bg-cover bg-center bg-fixed"
+    className="absolute inset-0  bg-cover bg-center bg-fixed"
     style={{
-      backgroundImage: "url('/girl alone 1/both 1.jpg')",
+      backgroundImage: "url('/aboutpage.jpeg')",
     }}
   />
   
@@ -106,7 +105,7 @@ const AboutPage = () => {
             </div>
             <div className="relative">
               <img
-                src="/studio.png"
+                src="/studio1.jpeg"
                 alt="Studio workspace"
                 className="rounded-xl shadow-2xl"
               />
@@ -148,7 +147,9 @@ const AboutPage = () => {
       </section>
 
       {/* Location Section */}
-      <section className="py-20">
+      <section className="py-20" style={{
+      backgroundImage: "url('/studio2.jpeg')",
+    }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-sky-500 mb-4">
@@ -159,6 +160,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
+            
             <div className="border border-gray-800 p-6 rounded-xl text-center">
               <h3 className="text-xl font-semibold text-sky-500 mb-2">
                 Address
@@ -178,8 +180,6 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

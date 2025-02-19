@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Logo from "./assets/4pencils_Final.png";
+
 import {
   ChevronDown,
   Film,
-  Box,
   Palette,
   BookOpen,
   Menu,
@@ -12,14 +13,9 @@ import {
 
 const services = [
   {
-    name: "2D Animation",
+    name: "Animation",
     icon: <Film className="w-5 h-5" />,
-    path: "/2d-animation",
-  },
-  {
-    name: "3D Animation",
-    icon: <Box className="w-5 h-5" />,
-    path: "/3d-animation",
+    path: "/animation",
   },
   {
     name: "Illustrations",
@@ -50,15 +46,18 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
+             <Link
+              to="/">
             <img
               src="/4pencil-utils/4pencils_Final.png"
               alt="Logo"
               className="h-15 w-14"
             />
+              </Link>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8" style={{ fontFamily: "'Wonderkids', sans-serif" }}>
             <Link
               to="/"
               className={`${

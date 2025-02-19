@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-black">
+    <section id="contact" className="py-20 inset-0  bg-cover bg-center bg-fixed" style={{
+      backgroundImage: "url('/studio2.jpeg')",
+    }} >
       <div className="container mx-auto px-4 ">
         <div className="bg-sky-500 rounded-2xl p-12 text-center text-[#FFD700]">
           <h2 className="text-3xl font-bold mb-6">
@@ -12,9 +15,12 @@ const Contact = () => {
             Let's work together to bring your creative vision to life. Contact
             us today for a free consultation.
           </p>
-          <button className="bg-[#FFD700] text-sky-500 px-8 py-3 rounded-full hover:bg-[#FFC700]transition-colors shadow-lg">
+          <Link to="/Contact">
+           <button className="bg-[#FFD700] text-sky-500 px-8 py-3 rounded-full hover:bg-[#FFC700]transition-colors shadow-lg">
             Contact Us
           </button>
+          </Link>
+         
         </div>
       </div>
     </section>

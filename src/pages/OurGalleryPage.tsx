@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -15,10 +16,29 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    title: "Character Design",
+    title: "antimicrobial",
+    category: "2D Animation",
+    type: "video",
+    url: "https://www.youtube.com/embed/ctEyIELC9UQ", // Updated to YouTube embed URL
+    thumbnail: "/Gallery/microbial.png",
+    height: "h-64",
+  },
+  {
+    id: 2,
+    title: "Maggies Green",
+    category: "3D Animation",
+    type: "video",
+    url: "https://www.youtube.com/embed/O4ZzwJCNOAY",
+    thumbnail: "/Gallery/maggies.png",
+    height: "h-96",
+  },
+  {
+    id: 1,
+    title: "Med search Contraceptives",
     category: "2D Animation",
     type: "image",
-    url: "4pencil-utils/page 4.jpg",
+    url: "https://www.youtube.com/embed/O9U4IGB0v3k",
+    thumbnail: "/Gallery/med-search.png",
     height: "h-64",
   },
   {
@@ -26,42 +46,8 @@ const galleryItems: GalleryItem[] = [
     title: "3D Animation Reel",
     category: "3D Animation",
     type: "video",
-    url: "https://player.vimeo.com/video/225434434?autoplay=0",
+    url: "/videos/Basket Ball - Copy_1.mp4",
     thumbnail: "/4pencil-utils/MIXKASAMWA0001.png",
-    height: "h-96",
-  },
-  {
-    id: 3,
-    title: "Fantasy Landscape",
-    category: "Illustrations",
-    type: "image",
-    url: "/projects/illustratio3.jpeg",
-    height: "h-72",
-  },
-  {
-    id: 4,
-    title: "Motion Graphics Demo",
-    category: "2D Animation",
-    type: "video",
-    url: "https://player.vimeo.com/video/162052542?autoplay=0",
-    thumbnail: "/NIRAS INTERNATIONAL/4.png",
-    height: "h-80",
-  },
-  {
-    id: 5,
-    title: "Digital Art",
-    category: "Illustrations",
-    type: "image",
-    url: "/GIZ/3.png",
-    height: "h-72",
-  },
-  {
-    id: 6,
-    title: "Character Animation",
-    category: "2D Animation",
-    type: "video",
-    url: "https://player.vimeo.com/video/163786575?autoplay=0",
-    thumbnail: "/projects/2d-art.jpeg",
     height: "h-96",
   },
   {
@@ -69,7 +55,7 @@ const galleryItems: GalleryItem[] = [
     title: "Character Design",
     category: "2D Animation",
     type: "image",
-    url: "/projects/character.jpeg",
+    url: "/4pencil-utils/page 4.jpg",
     height: "h-64",
   },
   {
@@ -77,44 +63,87 @@ const galleryItems: GalleryItem[] = [
     title: "3D Animation Reel",
     category: "3D Animation",
     type: "video",
-    url: "https://player.vimeo.com/video/225434434?autoplay=0",
-    thumbnail: "/girl alone 1/boy 2.jpg",
+    url: "/videos/Basket Ball - Copy_1.mp4",
+    thumbnail: "/4pencil-utils/MIXKASAMWA0001.png",
     height: "h-96",
   },
   {
-    id: 3,
-    title: "Fantasy Landscape",
-    category: "Illustrations",
-    type: "image",
-    url: "/NIRAS INTERNATIONAL/5.png",
-    height: "h-72",
-  },
-  {
-    id: 4,
-    title: "Motion Graphics Demo",
+    id: 1,
+    title: "Character Design",
     category: "2D Animation",
-    type: "video",
-    url: "https://player.vimeo.com/video/162052542?autoplay=0",
-    thumbnail: "/NIRAS INTERNATIONAL/4.png",
-    height: "h-80",
-  },
-  {
-    id: 5,
-    title: "Digital Art",
-    category: "Illustrations",
     type: "image",
-    url: "/projects/2d-art.jpeg",
-    height: "h-72",
+    url: "/4pencil-utils/page 4.jpg",
+    height: "h-64",
   },
   {
-    id: 6,
-    title: "Character Animation",
-    category: "2D Animation",
+    id: 2,
+    title: "3D Animation Reel",
+    category: "3D Animation",
     type: "video",
-    url: "https://player.vimeo.com/video/163786575?autoplay=0",
-    thumbnail: "/projects/chlorinated-water.jpeg",
+    url: "/videos/Basket Ball - Copy_1.mp4",
+    thumbnail: "/4pencil-utils/MIXKASAMWA0001.png",
     height: "h-96",
   },
+  {
+    id: 1,
+    title: "Character Design",
+    category: "2D Animation",
+    type: "image",
+    url: "/4pencil-utils/page 4.jpg",
+    height: "h-64",
+  },
+  {
+    id: 1,
+    title: "Character Design",
+    category: "2D Animation",
+    type: "image",
+    url: "/4pencil-utils/page 4.jpg",
+    height: "h-64",
+  },
+  {
+    id: 2,
+    title: "3D Animation Reel",
+    category: "3D Animation",
+    type: "video",
+    url: "/videos/Basket Ball - Copy_1.mp4",
+    thumbnail: "/4pencil-utils/MIXKASAMWA0001.png",
+    height: "h-96",
+  },
+  {
+    id: 1,
+    title: "Character Design",
+    category: "2D Animation",
+    type: "image",
+    url: "/4pencil-utils/page 4.jpg",
+    height: "h-64",
+  },
+  {
+    id: 2,
+    title: "3D Animation Reel",
+    category: "3D Animation",
+    type: "video",
+    url: "/videos/Basket Ball - Copy_1.mp4",
+    thumbnail: "/4pencil-utils/MIXKASAMWA0001.png",
+    height: "h-96",
+  },
+  {
+    id: 1,
+    title: "Character Design",
+    category: "2D Animation",
+    type: "image",
+    url: "/4pencil-utils/page 4.jpg",
+    height: "h-64",
+  },
+  {
+    id: 2,
+    title: "3D Animation Reel",
+    category: "3D Animation",
+    type: "video",
+    url: "/videos/Basket Ball - Copy_1.mp4",
+    thumbnail: "/4pencil-utils/MIXKASAMWA0001.png",
+    height: "h-96",
+  },
+  // Add other items here...
 ];
 
 const Gallery: React.FC = () => {
@@ -126,131 +155,77 @@ const Gallery: React.FC = () => {
 
   return (
     <>
-      <div className="min-h-screen py-24 bg-black px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen py-24 bg-black px-4 sm:px-6 lg:px-8" style={{ fontFamily: "'Wonderkids', sans-serif" }}>
         <Navbar />
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-sky-500 sm:text-4xl">
-              Our Creative Portfolio
-            </h2>
-            <p className="mt-4 text-xl text-[#FFD500]">
-              Explore our diverse collection of artwork, animations, and videos
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold text-sky-500 sm:text-4xl">
+            Our Creative Portfolio
+          </h2>
+          <p className="mt-4 text-xl text-[#FFD700]">
+            Explore our diverse collection of artwork, animations, and videos
+          </p>
+        </div>
 
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryItems.map((item) => (
-              <div
-                key={item.id}
-                onClick={() => setSelectedItem(item)}
-                className={`group relative ${item.height} overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer`}
-              >
-                {item.type === "video" ? (
-                  <div className="relative h-full">
+        <div className="mt-12">
+          <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+            <Masonry gutter="20px">
+              {galleryItems.map((item) => (
+                <div
+                  key={item.id}
+                  onClick={() => setSelectedItem(item)}
+                  className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
+                >
+                  {item.type === "video" ? (
                     <img
                       src={item.thumbnail}
                       alt={item.title}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      className="w-full object-cover"
                     />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="rounded-full bg-white/80 p-4">
-                        <svg
-                          className="w-8 h-8 text-sky-500"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                          />
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                      </div>
+                  ) : (
+                    <img
+                      src={item.url}
+                      alt={item.title}
+                      className="w-full object-cover"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-sky-500">
+                      <h3 className="text-xl font-semibold">{item.title}</h3>
+                      <p className="mt-1 text-sm text-[#FFD700]">{item.category}</p>
                     </div>
                   </div>
-                ) : (
-                  <img
-                    src={item.url}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-sky-500">
-                    <h3 className="text-xl font-semibold">{item.title}</h3>
-                    <p className="mt-1 text-sm text-[#FFD700]">
-                      {item.category}
-                    </p>
-                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </Masonry>
+          </ResponsiveMasonry>
         </div>
       </div>
 
       {/* Modal for viewing videos and images */}
       {selectedItem && (
         <div
-          className="fixed inset-0 z-50 overflow-y-auto"
-          aria-labelledby="modal-title"
+          className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-75"
           role="dialog"
           aria-modal="true"
         >
-          <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div
-              className="fixed inset-0 bg-black transition-opacity"
-              aria-hidden="true"
-              onClick={closeModal}
-            ></div>
-
-            <div className="inline-block align-bottom bg-black rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
-              <div className="bg-black px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <div className="sm:flex sm:items-start">
-                  <div className="mt-3 text-center sm:mt-0 sm:text-left w-full">
-                    <h3
-                      className="text-lg leading-6 font-medium text-gray-900 mb-4"
-                      id="modal-title"
-                    >
-                      {selectedItem.title}
-                    </h3>
-                    <div className="aspect-video w-full">
-                      {selectedItem.type === "video" ? (
-                        <iframe
-                          src={selectedItem.url}
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="autoplay; fullscreen; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      ) : (
-                        <img
-                          src={selectedItem.url}
-                          alt={selectedItem.title}
-                          className="w-full h-full object-contain"
-                        />
-                      )}
-                    </div>
-                  </div>
-                </div>
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="bg-black rounded-lg text-white p-6 max-w-3xl w-full">
+              <h3 className="text-2xl text-sky-500 mb-4">{selectedItem.title}</h3>
+              <div className="aspect-video">
+                {selectedItem.type === "video" ? (
+                  <video controls className="w-full h-full">
+                    <source src={selectedItem.url} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img src={selectedItem.url} alt={selectedItem.title} className="w-full h-full object-contain" />
+                )}
               </div>
-              <div className="bg-black px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <button
-                  type="button"
-                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-black text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                  onClick={closeModal}
-                >
-                  Close
-                </button>
-              </div>
+              <button
+                className="mt-4 px-4 py-2 bg-sky-500 text-black rounded-md"
+                onClick={closeModal}
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>

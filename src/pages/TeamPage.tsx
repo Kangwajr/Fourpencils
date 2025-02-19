@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 function App() {
@@ -38,7 +37,7 @@ function App() {
       id: 6,
       name: "Numba.E.Kabila",
       isCenter: true,
-      role: "Character Designer/3D Modeling",
+      role: "Creative Director",
       image: "/team/numba.jpeg",
     },
     {
@@ -65,7 +64,7 @@ function App() {
   const centerMember = teamMembers.find((member) => member.isCenter);
 
   return (
-    <div className="min-h-screen bg-black p-8">
+    <div className="min-h-screen  p-8" style={{ fontFamily: "'Wonderkids', sans-serif",backgroundImage: "url('/studio1.jpeg')" }}>
       <div className="max-w-7xl mx-auto">
         <Navbar />
 
@@ -84,11 +83,11 @@ function App() {
           </div>
 
           {/* Circular Team Section */}
-          <div className="relative flex-1 h-[600px]">
+          <div className="relative flex-1 h-[600px] ">
             {/* Center Circle */}
             {centerMember && (
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="relative w-40 h-40 rounded-full bg-black shadow-xl flex items-center justify-center overflow-hidden">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ">
+                <div className="relative w-40 h-40 rounded-full bg-black shadow-xl flex items-center justify-center overflow-hidden animate-bounce">
                   <img
                     src={centerMember.image}
                     alt={centerMember.name}
@@ -122,7 +121,7 @@ function App() {
                     transform: "translate(-50%, -50%)",
                   }}
                 >
-                  <div className="relative w-24 h-24 rounded-full overflow-hidden transform transition-all duration-300 group-hover:scale-110 shadow-xl">
+                  <div className="relative w-24 h-24 rounded-full overflow-hidden transform transition-all duration-300 group-hover:scale-110 shadow-xl animate-spin">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -141,8 +140,6 @@ function App() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }
