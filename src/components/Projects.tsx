@@ -62,9 +62,10 @@ function serviceSection() {
   return (
     <section className="bg-black py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-sky-500 mb-12">
-          OUR SERVICES
+        <h2 className="text-6xl font-bold text-center text-sky-500 mb-12">
+          In House Projects
         </h2>
+        <p className="text-3xl font-bold text-[#FFD700] pt-0 max-w-3xl mx-auto px-4 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic sed illum ut, nam ratione</p>
         <div className="relative">
           <div className="overflow-hidden rounded-2xl">
             <div className="relative w-50 h-50">

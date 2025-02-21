@@ -35,7 +35,7 @@ const GalleryItem = ({
             <div className="flex items-center justify-center bg-[#FFD700] w-12 h-12 rounded-full mb-4 backdrop-blur-sm mx-auto">
               {icon}
             </div>
-            <div className="text-2xl font-bold mb-2 text-center text-sky-500">
+            <div className="text-6xl font-bold mb-2 text-center text-sky-500">
               {title}
             </div>
           </div>

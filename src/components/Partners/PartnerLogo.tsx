@@ -11,7 +11,7 @@ const PartnerLogo: React.FC<PartnerLogoProps> = ({ partner }) => {
       <img
         src={partner.logo}
         alt={partner.name}
-        className="w-full h-24 object-cover filter grayscale hover:grayscale-0 transition-all duration-300 shadow-lg"
+        className="w-full h-24 object-cover hover:grayscale-0 transition-all duration-300 shadow-lg"
       />
     </div>
   );
