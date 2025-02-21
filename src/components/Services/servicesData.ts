@@ -6,7 +6,7 @@ export const galleryItems = [
     title: "2D Animation",
     type: "image",
     icon: Paintbrush2,
-    url: "/projects/2d-art.jpeg",
+    url: "/4pencil-utils1/ServicesImages/house stuff 1.svg",
     galleryUrl: "/gallery",
   },
   {
@@ -14,7 +14,7 @@ export const galleryItems = [
     title: "3D Animation",
     type: "image",
     icon: Box, // Using Box instead of Cube
-    url: "/4pencil-utils/SuperDad.png",
+    url: "/4pencil-utils1/ServicesImages/3D.svg",
     galleryUrl: "/gallery",
   },
   {
@@ -30,7 +30,7 @@ export const galleryItems = [
     title: "Character Design",
     type: "video",
     icon: Film,
-    url: "/4pencil-utils/Super Boobs.png",
+    url: "/4pencil-utils1/ServicesImages/pose 5 1.svg",
     galleryUrl: "/Gallery",
   },
   {

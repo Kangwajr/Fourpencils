@@ -15,7 +15,7 @@ const OurGallery = () => {
 
   return (
     <div className="bg-black/20 px-0"> 
-    <div className="py-20  inset-0  bg-cover bg-center bg-fixed" style={{ fontFamily: "'Wonderkids', sans-serif", backgroundImage: "url('/studio2.jpeg')", }}>
+    <div className="py-20  inset-0  bg-cover bg-center bg-fixed" style={{ fontFamily: "'Wonderkids', sans-serif", backgroundImage: "url('/4pencil-utils1/ServicesImages/girls_final_.svg')", }}>
       <div className="text-center mb-12">
      
      <h1 className="text-6xl font-bold mb-4   text-sky-500">Services </h1>

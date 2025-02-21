@@ -11,15 +11,15 @@ import {
 
 const services = [
   {
-    url: "/projects/step 1.png",
-    title: "2D Animations",
+    url: "/NIRAS INTERNATIONAL/Nira1.svg",
+    title: "NIRAS INTERNATIONAL",
     description:
-      "Hand-crafted illustrations and digital artwork that capture imagination.",
+      "Safeguarding Posters for NIRAS International Designed visually engaging safeguarding posters for the Climate Justice Community (CJC), ensuring cultural relevance and accessibility. Incorporated feedback from NIRAS International staff and community representatives and translated materials into three main local languages.",
   },
   {
-    url: "/girl alone 1/boy 2.jpg",
-    title: "3D Animations",
-    description: "Stunning three-dimensional models and environments.",
+    url: "public/GIZ/2.png",
+    title: "GiZ",
+    description: "A magical journey through an enchanted forest, featuring hand-drawn characters and vibrant scenery. This project showcases our expertise in traditional animation techniques combined with modern digital tools. The story follows a young explorer discovering mythical creatures and ancient secrets hidden within the forest.",
   },
   {
     url: "/projects/3d-character.jpeg",
